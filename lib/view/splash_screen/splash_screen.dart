@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:messenger_clone/core/constant/image_const.dart';
 import 'package:messenger_clone/view/account_screen/account_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -26,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Center(
         child: Image.asset(
-          "asset/image/Icon (1).png",
+          ImageCOnstant.messengerlogo,
           scale: 1.5,
         ),
       ),

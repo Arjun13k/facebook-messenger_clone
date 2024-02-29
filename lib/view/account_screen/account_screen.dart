@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:messenger_clone/core/constant/color_const.dart';
+import 'package:messenger_clone/core/constant/global_widget/global_custom_button.dart';
+import 'package:messenger_clone/core/constant/image_const.dart';
 import 'package:messenger_clone/view/home_screen/chat_screen/chat_screen.dart';
 import 'package:messenger_clone/view/login_screen/login_screen.dart';
+import 'package:messenger_clone/view/tab/bottom_navigation.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key});
@@ -10,82 +14,63 @@ class AccountScreen extends StatelessWidget {
     return Scaffold(
         body: Center(
       child: Padding(
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // 1 messenger logo
             Image.asset(
-              "asset/image/Icon (1).png",
+              ImageCOnstant.messengerlogo,
               scale: 1.5,
             ),
             SizedBox(
-              height: 100,
+              height: 50,
             ),
             CircleAvatar(
-              backgroundImage: NetworkImage(
-                  "https://avatars.githubusercontent.com/u/159136735?v=4"),
-              radius: 100,
+              backgroundImage: NetworkImage(ImageCOnstant.profilepic),
+              radius: 80,
             ),
             SizedBox(
-              height: 40,
+              height: 10,
             ),
             Text(
               "Arjun k",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
             ),
             SizedBox(
-              height: 30,
+              height: 40,
             ),
-            InkWell(
-              onTap: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ChatScreen(),
-                    ));
-              },
-              child: Container(
-                height: 40,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(20)),
-                child: Center(
-                    child: Text(
-                  "Log in",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20),
-                )),
-              ),
-            ),
+            // login button
+            CustomButton(
+                ontap: () {
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BottomNav(),
+                      ),
+                      (route) => false);
+                },
+                text: "Login",
+                buttonColor: ColorConstant.primaryblue,
+                textColor: ColorConstant.primaryWhite,
+                haveBorder: false),
             SizedBox(
               height: 10,
             ),
-            InkWell(
-              onTap: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => LoginScreen(),
-                    ));
-              },
-              child: Container(
-                height: 40,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(width: 1)),
-                child: Center(
-                    child: Text(
-                  "Log into another account",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15),
-                )),
-              ),
-            )
+            //login with other
+            CustomButton(
+                ontap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginScreen(),
+                      ));
+                },
+                text: "Log into another account",
+                buttonColor: ColorConstant.primaryWhite,
+                textColor: Colors.black,
+                haveBorder: true)
           ],
         ),
       ),

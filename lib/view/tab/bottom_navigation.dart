@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:messenger_clone/view/home_screen/call_screen/call_screen.dart';
 import 'package:messenger_clone/view/home_screen/chat_screen/chat_screen.dart';
 import 'package:messenger_clone/view/home_screen/people_screen/people_screen.dart';
 
@@ -11,7 +12,7 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   int indexValue = 0;
-  final screen = [ChatScreen(), MyPeople()];
+  final List screen = [ChatScreen(), Call(), MyPeople()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,12 +26,11 @@ class _BottomNavState extends State<BottomNav> {
           type: BottomNavigationBarType.fixed,
           currentIndex: indexValue,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.chat), label: "chat"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.video_call), label: "call"),
+                icon: Icon(Icons.chat_bubble_outlined), label: "chat"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.person_2), label: "person"),
-            BottomNavigationBarItem(icon: Icon(Icons.pages_outlined))
+                icon: Icon(Icons.videocam_rounded), label: "call"),
+            BottomNavigationBarItem(icon: Icon(Icons.group), label: "people"),
           ]),
     );
   }
