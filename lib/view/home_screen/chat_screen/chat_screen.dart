@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:messenger_clone/core/constant/color_const.dart';
+import 'package:messenger_clone/core/constant/image_const.dart';
 import 'package:messenger_clone/view/dummy_db.dart';
-import 'package:messenger_clone/view/home_screen/chat_screen/circleava_tab.dart';
+import 'package:messenger_clone/view/home_screen/chat_screen/channel_tab.dart';
+import 'package:messenger_clone/view/home_screen/chat_screen/widget/circleava_tab.dart';
+import 'package:messenger_clone/view/home_screen/chat_screen/home_screen.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -43,76 +47,103 @@ class _ChatScreenState extends State<ChatScreen> {
             children: [
               TextField(
                 decoration: InputDecoration(
-                  prefixIcon: Icon(
-                    Icons.search,
-                  ),
-                  hintText: "Search",
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide.none),
-                  fillColor: Color.fromARGB(255, 248, 246, 246),
-                  filled: true,
+                    isDense: true,
+                    prefixIcon: Icon(Icons.search),
+                    hintText: "Search",
+                    fillColor: ColorConstant.primaryBlack.withOpacity(.1),
+                    filled: true,
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide.none),
+                    contentPadding:
+                        EdgeInsets.symmetric(horizontal: 10, vertical: 5)),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Stack(alignment: Alignment.topLeft, children: [
+                      CircleAvatar(
+                        backgroundImage: NetworkImage(ImageCOnstant.profilepic),
+                        radius: 30,
+                      ),
+                      Positioned(
+                          top: 0,
+                          left: 0,
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundImage: NetworkImage(
+                                "https://th.bing.com/th/id/OIP.Baci_-540n0LhFBio_V1uAAAAA?rs=1&pid=ImgDetMain"),
+                          )),
+                    ]),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Row(
+                      children: List.generate(
+                          DummyDb.profile.length,
+                          (index) => MyCircle(
+                                profile: DummyDb.profile[index],
+                              )),
+                    )
+                  ],
                 ),
               ),
               SizedBox(
                 height: 20,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Stack(children: [
-                    CircleAvatar(
-                      backgroundImage: NetworkImage(
-                          "https://avatars.githubusercontent.com/u/159136735?v=4"),
-                      radius: 30,
+                  InkWell(
+                    onTap: () {
+                      setState(() {});
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomeTab(),
+                          ));
+                    },
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 73.5, vertical: 5),
+                      decoration: BoxDecoration(
+                          color: ColorConstant.primaryBlack.withOpacity(.2),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Center(
+                          child: Text(
+                        "Home",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )),
                     ),
-                    Positioned(
-                        top: -10,
-                        left: -15,
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.add,
-                          ),
-                        )),
-                  ]),
-                  SizedBox(
-                    width: 15,
                   ),
-                  SizedBox(
-                    height: 50,
-                    child: ListView.separated(
-                        scrollDirection: Axis.horizontal,
-                        shrinkWrap: true,
-                        itemBuilder: (context, index) =>
-                            MyCircle(active: DummyDb.profile[index]),
-                        separatorBuilder: (context, index) => SizedBox(
-                              width: 15,
-                            ),
-                        itemCount: DummyDb.profile.length),
-                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {});
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ChannelTab()));
+                    },
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 67, vertical: 5),
+                      decoration: BoxDecoration(
+                          color: ColorConstant.primaryBlack.withOpacity(.2),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Center(
+                          child: Text(
+                        "Channel",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )),
+                    ),
+                  )
                 ],
               ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                decoration: BoxDecoration(color: Colors.grey),
-                child: Center(
-                    child: Text(
-                  "Home",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                )),
-              ),
-              Container(
-                decoration: BoxDecoration(color: Colors.grey),
-                child: Center(
-                    child: Text(
-                  "Home",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                )),
-              )
             ],
           ),
         ),
