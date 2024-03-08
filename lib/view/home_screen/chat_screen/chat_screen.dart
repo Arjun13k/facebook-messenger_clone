@@ -4,7 +4,6 @@ import 'package:messenger_clone/core/constant/image_const.dart';
 import 'package:messenger_clone/view/dummy_db.dart';
 import 'package:messenger_clone/view/home_screen/chat_screen/channel_tab.dart';
 import 'package:messenger_clone/view/home_screen/chat_screen/widget/circleava_tab.dart';
-import 'package:messenger_clone/view/home_screen/chat_screen/home_screen.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -102,11 +101,15 @@ class _ChatScreenState extends State<ChatScreen> {
                   InkWell(
                     onTap: () {
                       setState(() {});
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomeTab(),
-                          ));
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //       builder: (context) => HomeTab(
+                      //           username: "username",
+                      //           message: "message",
+                      //           time: "time",
+                      //           profile: "profile"),
+                      //     ));
                     },
                     child: Container(
                       padding:
@@ -144,6 +147,15 @@ class _ChatScreenState extends State<ChatScreen> {
                   )
                 ],
               ),
+              // Column(
+              //   children: List.generate(
+              //       DummyDb.homeList.length,
+              //       (index) => HomeTab(
+              //           username: DummyDb.homeList[index]["username"],
+              //           message: "message",
+              //           time: "time",
+              //           profile: "profile")),
+              // )
             ],
           ),
         ),

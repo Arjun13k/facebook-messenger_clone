@@ -1,24 +1,36 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-class HomeTab extends StatelessWidget {
-  const HomeTab({super.key});
+// class HomeTab extends StatefulWidget {
+//   const HomeTab(
+//       {super.key,
+//       required this.username,
+//       required this.message,
+//       required this.time,
+//       required this.profile});
+//   final String username;
+//   final String message;
+//   final String time;
+//   final String profile;
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.amber,
-      child: Row(
-        children: [
-          CircleAvatar(
-            radius: 30,
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [Text('username'), Text('message')],
-          )
-        ],
-      ),
-    );
-  }
-}
+//   @override
+//   State<HomeTab> createState() => _HomeTabState();
+// }
+
+// class _HomeTabState extends State<HomeTab> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//         body: Container(
+//             child: ListTile(
+//       leading: CircleAvatar(
+//         backgroundImage: NetworkImage(widget.profile),
+//         radius: 30,
+//       ),
+//       title: Text(
+//         widget.username,
+//       ),
+//       subtitle: Text(widget.message),
+//       trailing: Text(widget.time),
+//     )));
+//   }
+// }

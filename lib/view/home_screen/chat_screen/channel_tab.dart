@@ -5,8 +5,6 @@ class ChannelTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.amber,
-    );
+    return Scaffold();
   }
 }
