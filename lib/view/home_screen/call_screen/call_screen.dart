@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:messenger_clone/core/constant/color_const.dart';
 import 'package:messenger_clone/view/dummy_db.dart';
 import 'package:messenger_clone/view/home_screen/call_screen/widget/list_of_calls.dart';
+import 'package:messenger_clone/view/home_screen/call_screen/widget/start_a_Call.dart';
 
 class Call extends StatelessWidget {
   const Call({super.key});
@@ -21,7 +22,13 @@ class Call extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28)),
         actions: [
           IconButton.filledTonal(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => StartACall(),
+                  ));
+            },
             icon: Icon(
               Icons.call,
               size: 25,
@@ -74,7 +81,13 @@ class Call extends StatelessWidget {
                           color: ColorConstant.primaryblue,
                           borderRadius: BorderRadius.circular(10)),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => StartACall(),
+                              ));
+                        },
                         child: Text("START A CALLS",
                             style: TextStyle(
                                 color: ColorConstant.primaryWhite,

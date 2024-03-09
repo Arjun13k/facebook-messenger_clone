@@ -3,7 +3,7 @@ import 'package:messenger_clone/core/constant/color_const.dart';
 import 'package:messenger_clone/core/constant/global_widget/global_custom_button.dart';
 import 'package:messenger_clone/core/constant/image_const.dart';
 import 'package:messenger_clone/view/home_screen/chat_screen/chat_screen.dart';
-import 'package:messenger_clone/view/tab/bottom_navigation.dart';
+import 'package:messenger_clone/view/bottom_navigation/bottom_navigation.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

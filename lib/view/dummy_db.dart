@@ -81,7 +81,7 @@ class DummyDb {
       "message": "Shared a post- Today"
     },
   ];
-  static const homeList = [
+  static List homeList = [
     {
       "username": "Liam",
       "profile":
