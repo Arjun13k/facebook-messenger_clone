@@ -102,7 +102,6 @@ class _ChatScreenState extends State<ChatScreen> {
                 SizedBox(
                   height: 20,
                 ),
-
                 TabBar(
                     onTap: (value) {
                       setState(() {
@@ -128,76 +127,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         text: "Channel",
                       )
                     ]),
-                // TabBarView(children: [
-                //   Container(
-                //     color: Colors.black,
-                //   ),
-                //   Container(
-                //     color: ColorConstant.primaryblue,
-                //   )
-                // ]),
-                // TabBarView(children: [
-                //   Container(
-                //     color: Colors.black,
-                //   ),
-                //   Container(
-                //     color: ColorConstant.primaryblue,
-                //   )
-                // ]),
-                widget.currentContinerIndex == 0 ? Container() : ChannelTab()
-                // Expanded(
-                //   child: TabBarView(children: [
-                //     HomeTab(),
-                //     ChannelTab(),
-                //   ]),
-                // )
-
-                // Row(
-                //   children: [
-                //     Container(
-                //       padding:
-                //           EdgeInsets.symmetric(horizontal: 73.5, vertical: 5),
-                //       decoration: BoxDecoration(
-                //           color: ColorConstant.primaryBlack.withOpacity(.2),
-                //           borderRadius: BorderRadius.circular(20)),
-                //       child: Center(
-                //           child: Text(
-                //         "Home",
-                //         style: TextStyle(fontWeight: FontWeight.bold),
-                //       )),
-                //     ),
-                //     InkWell(
-                //       onTap: () {
-                //         setState(() {});
-                //         Navigator.push(
-                //             context,
-                //             MaterialPageRoute(
-                //                 builder: (context) => ChannelTab()));
-                //       },
-                //       child: Container(
-                //         padding:
-                //             EdgeInsets.symmetric(horizontal: 67, vertical: 5),
-                //         decoration: BoxDecoration(
-                //             color: ColorConstant.primaryBlack.withOpacity(.2),
-                //             borderRadius: BorderRadius.circular(20)),
-                //         child: Center(
-                //             child: Text(
-                //           "Channel",
-                //           style: TextStyle(fontWeight: FontWeight.bold),
-                //         )),
-                //       ),
-                //     )
-                //   ],
-                // ),
-                // Column(
-                //   children: List.generate(
-                //       DummyDb.homeList.length,
-                //       (index) => HomeTab(
-                //           username: DummyDb.homeList[index]["username"],
-                //           message: "message",
-                //           time: "time",
-                //           profile: "profile")),
-                // )
+                widget.currentContinerIndex == 0 ? ChatList() : ChannelTab()
               ],
             ),
           ),

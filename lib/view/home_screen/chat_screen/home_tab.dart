@@ -19,9 +19,7 @@ class HomeTab extends StatefulWidget {
 class _HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
-            child: ListTile(
+    return ListTile(
       leading: CircleAvatar(
         backgroundImage: NetworkImage(widget.profile),
         radius: 30,
@@ -31,6 +29,6 @@ class _HomeTabState extends State<HomeTab> {
       ),
       subtitle: Text(widget.message),
       trailing: Text(widget.time),
-    )));
+    );
   }
 }
