@@ -127,6 +127,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         text: "Channel",
                       )
                     ]),
+                // TabBarView(children: [ChatList(), ChannelTab()])
                 widget.currentContinerIndex == 0 ? ChatList() : ChannelTab()
               ],
             ),

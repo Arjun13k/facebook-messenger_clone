@@ -85,14 +85,14 @@ class DummyDb {
     {
       "username": "Liam",
       "profile":
-          "https://images.pexels.com/photos/123456/pexels-photo-123456.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+          "https://images.pexels.com/photos/20440051/pexels-photo-20440051/free-photo-of-a-woman-leaning-against-a-railing-with-her-hand-on-her-chin.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       "message": "Hi,how are you",
       "time": "7:00"
     },
     {
       "username": "Noah",
       "profile":
-          "https://images.pexels.com/photos/456789/pexels-photo-456789.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+          "https://images.pexels.com/photos/20392251/pexels-photo-20392251/free-photo-of-a-brown-butterfly-sitting-on-a-leaf-with-green-leaves.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       "message": "Hi",
       "time": "7:15"
     },
@@ -120,7 +120,7 @@ class DummyDb {
     {
       "username": "Jackson",
       "profile":
-          "https://images.pexels.com/photos/345678/pexels-photo-345678.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+          "https://images.pexels.com/photos/20410779/pexels-photo-20410779/free-photo-of-a-wooden-walkway-in-the-middle-of-a-jungle.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       "message": "just hanging out.",
       "time": "10:30"
     },
@@ -134,21 +134,21 @@ class DummyDb {
     {
       "username": "James",
       "profile":
-          "https://images.pexels.com/photos/543210/pexels-photo-543210.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+          "https://images.pexels.com/photos/6224550/pexels-photo-6224550.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       "message": "How about you?",
       "time": "10:45"
     },
     {
       "username": "Benjamin",
       "profile":
-          "https://images.pexels.com/photos/654321/pexels-photo-654321.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+          "https://images.pexels.com/photos/20035171/pexels-photo-20035171/free-photo-of-a-table-with-candles-and-a-white-cloth.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       "message": "what's up?",
       "time": "10:50"
     },
     {
       "username": "Elijah",
       "profile":
-          "https://images.pexels.com/photos/654321/pexels-photo-654321.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+          "https://images.pexels.com/photos/18625018/pexels-photo-18625018/free-photo-of-model-sitting-and-posing-with-arms-crossed-on-beach.png?auto=compress&cs=tinysrgb&w=600&lazy=load",
       "message": "Hey there,",
       "time": "11:20"
     },
@@ -249,5 +249,53 @@ class DummyDb {
       "Active": "5321 active",
       "pagedetails": "Job vacancy in india",
     }
+  ];
+  static List story = [
+    {
+      "text": "Add all",
+      "me": true,
+      "storyPic": "https://avatars.githubusercontent.com/u/159136735?v=4",
+      "circlePic": "https://avatars.githubusercontent.com/u/159136735?v=4"
+    },
+    {
+      "text": "add all",
+      "me": false,
+      "storyPic":
+          "https://images.pexels.com/photos/9940318/pexels-photo-9940318.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "circlePic":
+          "https://images.pexels.com/photos/3049394/pexels-photo-3049394.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "text": "add all",
+      "me": false,
+      "storyPic":
+          "https://images.pexels.com/photos/1374064/pexels-photo-1374064.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "circlePic":
+          "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "text": "add all",
+      "me": false,
+      "storyPic":
+          "https://images.pexels.com/photos/699459/pexels-photo-699459.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "circlePic":
+          "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "text": "Anamika",
+      "me": false,
+      "storyPic":
+          "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "circlePic":
+          "https://images.pexels.com/photos/762080/pexels-photo-762080.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "text": "Ajas",
+      "me": false,
+      "storyPic":
+          "https://images.pexels.com/photos/1687093/pexels-photo-1687093.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "circlePic":
+          "https://images.pexels.com/photos/601170/pexels-photo-601170.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
   ];
 }
