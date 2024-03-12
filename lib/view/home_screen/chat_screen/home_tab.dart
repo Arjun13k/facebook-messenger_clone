@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:messenger_clone/view/home_screen/chat_screen/widget/home_widget/chat_inside.dart';
 
 class HomeTab extends StatefulWidget {
   const HomeTab(
@@ -19,16 +20,25 @@ class HomeTab extends StatefulWidget {
 class _HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: CircleAvatar(
-        backgroundImage: NetworkImage(widget.profile),
-        radius: 30,
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ChatInside(),
+            ));
+      },
+      child: ListTile(
+        leading: CircleAvatar(
+          backgroundImage: NetworkImage(widget.profile),
+          radius: 30,
+        ),
+        title: Text(
+          widget.username,
+        ),
+        subtitle: Text(widget.message),
+        trailing: Text(widget.time),
       ),
-      title: Text(
-        widget.username,
-      ),
-      subtitle: Text(widget.message),
-      trailing: Text(widget.time),
     );
   }
 }

@@ -26,7 +26,8 @@ class CustomButton extends StatelessWidget {
             color: buttonColor,
             borderRadius: BorderRadius.circular(20),
             border: haveBorder == true
-                ? Border.all(width: 1, color: ColorConstant.primaryBlack)
+                ? Border.all(
+                    width: 1, color: ColorConstant.primaryBlack.withOpacity(.4))
                 : null,
           ),
           child: Center(

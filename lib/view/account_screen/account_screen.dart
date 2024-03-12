@@ -60,17 +60,18 @@ class AccountScreen extends StatelessWidget {
             ),
             //login with other
             CustomButton(
-                ontap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => LoginScreen(),
-                      ));
-                },
-                text: "Log into another account",
-                buttonColor: ColorConstant.primaryWhite,
-                textColor: Colors.black,
-                haveBorder: true)
+              ontap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LoginScreen(),
+                    ));
+              },
+              text: "Log into another account",
+              buttonColor: ColorConstant.primaryWhite,
+              textColor: Colors.black,
+              haveBorder: true,
+            )
           ],
         ),
       ),

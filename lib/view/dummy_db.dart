@@ -298,4 +298,10 @@ class DummyDb {
           "https://images.pexels.com/photos/601170/pexels-photo-601170.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
   ];
+  static List chat = [
+    {"text": "hi", "isSender": false},
+    {"text": "hi", "isSender": true},
+    {"text": "hi hi", "isSender": false},
+    {"text": "hi hello", "isSender": true}
+  ];
 }
