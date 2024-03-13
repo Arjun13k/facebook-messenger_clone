@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:messenger_clone/core/constant/color_const.dart';
+import 'package:messenger_clone/view/home_screen/status_screen/widget/my_status.dart';
 
 class StatusGrid extends StatelessWidget {
   const StatusGrid(
@@ -22,39 +23,48 @@ class StatusGrid extends StatelessWidget {
           child: Row(
             children: [
               me == true
-                  ? Container(
-                      child: Stack(
-                        children: [
-                          Container(
-                            height: 250,
-                            width: 180,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: NetworkImage(storyPic),
-                                  fit: BoxFit.cover),
-                              borderRadius: BorderRadius.circular(20),
+                  ? InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyStatus(),
+                            ));
+                      },
+                      child: Container(
+                        child: Stack(
+                          children: [
+                            Container(
+                              height: 250,
+                              width: 180,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: NetworkImage(storyPic),
+                                    fit: BoxFit.cover),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                             ),
-                          ),
-                          Positioned(
-                              top: 10,
-                              left: 10,
-                              child: CircleAvatar(
-                                radius: 30,
-                                child: Icon(
-                                  Icons.add,
-                                  size: 35,
-                                ),
-                              )),
-                          Positioned(
-                              bottom: 10,
-                              right: 15,
-                              child: Text(
-                                text,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: ColorConstant.primaryWhite),
-                              ))
-                        ],
+                            Positioned(
+                                top: 10,
+                                left: 10,
+                                child: CircleAvatar(
+                                  radius: 30,
+                                  child: Icon(
+                                    Icons.add,
+                                    size: 35,
+                                  ),
+                                )),
+                            Positioned(
+                                bottom: 10,
+                                right: 15,
+                                child: Text(
+                                  text,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: ColorConstant.primaryWhite),
+                                ))
+                          ],
+                        ),
                       ),
                     )
                   : Container(

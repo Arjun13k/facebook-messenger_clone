@@ -4,9 +4,7 @@ import 'package:messenger_clone/core/constant/image_const.dart';
 import 'package:messenger_clone/view/dummy_db.dart';
 import 'package:messenger_clone/view/home_screen/chat_screen/channel_tab.dart';
 import 'package:messenger_clone/view/home_screen/chat_screen/chat_list.dart';
-import 'package:messenger_clone/view/home_screen/chat_screen/home_tab.dart';
 import 'package:messenger_clone/view/home_screen/chat_screen/widget/circleava_tab.dart';
-import 'package:messenger_clone/view/home_screen/menu_bar/market_place.dart';
 
 class ChatScreen extends StatefulWidget {
   ChatScreen({super.key});
@@ -44,96 +42,6 @@ class _ChatScreenState extends State<ChatScreen> {
               width: 10,
             ),
           ],
-        ),
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-            children: [
-              InkWell(
-                child: Container(
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 30,
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "ARJUN K",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                      Icon(Icons.arrow_drop_down_rounded),
-                      Spacer(),
-                      IconButton(onPressed: () {}, icon: Icon(Icons.settings))
-                    ],
-                  ),
-                ),
-              ),
-              ListTile(
-                leading: Icon(
-                  Icons.chat_bubble,
-                  color: ColorConstant.primaryBlack,
-                ),
-                title: Text(
-                  'Chats',
-                  style: TextStyle(
-                    color: ColorConstant.primaryBlack,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ChatScreen(),
-                      ));
-                },
-              ),
-              ListTile(
-                leading: Icon(
-                  Icons.storefront,
-                  color: ColorConstant.primaryBlack,
-                ),
-                title: Text(
-                  'Marketplace',
-                  style: TextStyle(
-                    color: ColorConstant.primaryBlack,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MarketPlace()));
-                },
-              ),
-              ListTile(
-                leading: Icon(
-                  Icons.message_rounded,
-                  color: ColorConstant.primaryBlack,
-                ),
-                title: Text(
-                  'Message request',
-                  style: TextStyle(
-                    color: ColorConstant.primaryBlack,
-                  ),
-                ),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: Icon(
-                  Icons.inventory_2,
-                  color: ColorConstant.primaryBlack,
-                ),
-                title: Text(
-                  'Archive',
-                  style: TextStyle(
-                    color: ColorConstant.primaryBlack,
-                  ),
-                ),
-                onTap: () {},
-              )
-            ],
-          ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(10),

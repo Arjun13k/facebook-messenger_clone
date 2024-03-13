@@ -304,4 +304,7 @@ class DummyDb {
     {"text": "hi hi", "isSender": false},
     {"text": "hi hello", "isSender": true}
   ];
+  static List person = [
+    {"text": "Darkmode", "profile": "Darkmode"},
+  ];
 }

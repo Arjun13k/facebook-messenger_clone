@@ -12,13 +12,13 @@ class Call extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton.filledTonal(
-          onPressed: () {},
-          icon: Icon(
-            Icons.menu,
-            size: 25,
-          ),
-        ),
+        // leading: IconButton.filledTonal(
+        //   onPressed: () {},
+        //   icon: Icon(
+        //     Icons.menu,
+        //     size: 25,
+        //   ),
+        // ),
         title: Text("Calls",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28)),
         actions: [

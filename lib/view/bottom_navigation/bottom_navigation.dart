@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:messenger_clone/core/constant/color_const.dart';
+import 'package:messenger_clone/core/constant/image_const.dart';
 import 'package:messenger_clone/view/home_screen/call_screen/call_screen.dart';
 import 'package:messenger_clone/view/home_screen/chat_screen/chat_screen.dart';
+import 'package:messenger_clone/view/home_screen/menu_bar/Archive.dart';
+import 'package:messenger_clone/view/home_screen/menu_bar/market_place.dart';
+import 'package:messenger_clone/view/home_screen/menu_bar/message_request.dart';
+import 'package:messenger_clone/view/home_screen/menu_bar/personal_account/personal_acount.dart';
 
 import 'package:messenger_clone/view/home_screen/people_screen/people_screen.dart';
 import 'package:messenger_clone/view/home_screen/status_screen/status_screen.dart';
@@ -19,6 +24,118 @@ class _BottomNavState extends State<BottomNav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+          children: [
+            InkWell(
+              child: Container(
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: NetworkImage(ImageCOnstant.profilepic),
+                      radius: 30,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "ARJUN K",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    Icon(Icons.arrow_drop_down_rounded),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PersonalAcoount(),
+                              ));
+                        },
+                        icon: Icon(Icons.settings))
+                  ],
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.chat_bubble,
+                color: ColorConstant.primaryBlack,
+              ),
+              title: Text(
+                'Chats',
+                style: TextStyle(
+                  color: ColorConstant.primaryBlack,
+                ),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ChatScreen(),
+                    ));
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.storefront,
+                color: ColorConstant.primaryBlack,
+              ),
+              title: Text(
+                'Marketplace',
+                style: TextStyle(
+                  color: ColorConstant.primaryBlack,
+                ),
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MarketPlace()));
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.message_rounded,
+                color: ColorConstant.primaryBlack,
+              ),
+              title: Text(
+                'Message request',
+                style: TextStyle(
+                  color: ColorConstant.primaryBlack,
+                ),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MessageRequest(),
+                    ));
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.inventory_2,
+                color: ColorConstant.primaryBlack,
+              ),
+              title: Text(
+                'Archive',
+                style: TextStyle(
+                  color: ColorConstant.primaryBlack,
+                ),
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Archive(),
+                    ));
+              },
+            )
+          ],
+        ),
+      ),
       body: screen[indexValue],
       bottomNavigationBar: BottomNavigationBar(
           onTap: (value) {
