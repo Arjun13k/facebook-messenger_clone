@@ -4,7 +4,9 @@ import 'package:messenger_clone/view/dummy_db.dart';
 import 'package:messenger_clone/view/home_screen/chat_screen/widget/home_widget/chat_align.dart';
 
 class ChatInside extends StatelessWidget {
-  const ChatInside({super.key});
+  const ChatInside({super.key, required this.username, required this.profile});
+  final String username;
+  final String profile;
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +21,7 @@ class ChatInside extends StatelessWidget {
           children: [
             Stack(alignment: Alignment.bottomRight, children: [
               CircleAvatar(
-                backgroundImage: NetworkImage(
-                    "https://images.pexels.com/photos/7782941/pexels-photo-7782941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+                backgroundImage: NetworkImage(profile),
                 radius: 20,
               ),
               Positioned(
@@ -42,7 +43,7 @@ class ChatInside extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'username',
+                  username,
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 Text(

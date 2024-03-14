@@ -7,13 +7,21 @@ class GeneratedList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListTile(
-        leading: CircleAvatar(
-          backgroundImage: NetworkImage(profile),
-          radius: 20,
-        ),
-        title: Text(text),
+    return Container(
+      child: Row(
+        children: [
+          CircleAvatar(
+            radius: 25,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Column(
+            children: [Text("Arjun k"), Text('Signed in')],
+          ),
+          Spacer(),
+          Icon(Icons.done)
+        ],
       ),
     );
   }

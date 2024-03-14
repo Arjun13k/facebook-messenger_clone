@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:messenger_clone/core/constant/color_const.dart';
 import 'package:messenger_clone/view/dummy_db.dart';
 import 'package:messenger_clone/view/home_screen/call_screen/widget/call_list/call_list.dart';
-import 'package:messenger_clone/view/home_screen/call_screen/widget/list_of_calls.dart';
 
 class StartACall extends StatelessWidget {
   const StartACall({super.key});

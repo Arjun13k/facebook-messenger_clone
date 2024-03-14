@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:messenger_clone/core/constant/color_const.dart';
 import 'package:messenger_clone/core/constant/global_widget/global_custom_button.dart';
 import 'package:messenger_clone/core/constant/image_const.dart';
-import 'package:messenger_clone/view/home_screen/chat_screen/chat_screen.dart';
 import 'package:messenger_clone/view/login_screen/login_screen.dart';
 import 'package:messenger_clone/view/bottom_navigation/bottom_navigation.dart';
 

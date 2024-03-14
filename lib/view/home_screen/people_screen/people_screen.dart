@@ -15,26 +15,6 @@ class MyPeople extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton.filledTonal(
-          onPressed: () {},
-          icon: Icon(
-            Icons.menu,
-            size: 25,
-          ),
-        ),
-        title: Text(
-          'People',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
-        ),
-        actions: [
-          IconButton.filledTonal(
-              onPressed: () {},
-              icon: Icon(
-                Icons.contact_phone_outlined,
-              ))
-        ],
-      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),

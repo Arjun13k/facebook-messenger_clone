@@ -3,7 +3,6 @@ import 'package:messenger_clone/core/constant/color_const.dart';
 import 'package:messenger_clone/view/dummy_db.dart';
 import 'package:messenger_clone/view/home_screen/call_screen/widget/list_of_calls.dart';
 import 'package:messenger_clone/view/home_screen/call_screen/widget/call_list/start_a_Call.dart';
-import 'package:messenger_clone/view/home_screen/call_screen/widget/viedo_list/viedo_call_list.dart';
 
 class Call extends StatelessWidget {
   const Call({super.key});
@@ -11,51 +10,6 @@ class Call extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        // leading: IconButton.filledTonal(
-        //   onPressed: () {},
-        //   icon: Icon(
-        //     Icons.menu,
-        //     size: 25,
-        //   ),
-        // ),
-        title: Text("Calls",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28)),
-        actions: [
-          IconButton.filledTonal(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => StartACall(),
-                  ));
-            },
-            icon: Icon(
-              Icons.call,
-              size: 25,
-            ),
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          IconButton.filledTonal(
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ViedoCall(),
-                  ));
-            },
-            icon: Icon(
-              Icons.videocam_rounded,
-              size: 25,
-            ),
-          ),
-          SizedBox(
-            width: 10,
-          )
-        ],
-      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),

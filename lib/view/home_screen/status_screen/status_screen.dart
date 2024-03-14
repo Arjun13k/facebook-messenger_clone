@@ -8,19 +8,6 @@ class StatusScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton.filledTonal(
-          onPressed: () {},
-          icon: Icon(
-            Icons.menu,
-            size: 25,
-          ),
-        ),
-        title: Text(
-          'Stories',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
-        ),
-      ),
       body: SingleChildScrollView(
         child: GridView.builder(
           shrinkWrap: true,

@@ -20,29 +20,6 @@ class _ChatScreenState extends State<ChatScreen> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: AppBar(
-          // leading: IconButton.filledTonal(
-          //   onPressed: () {},
-          //   icon: Icon(
-          //     Icons.menu,
-          //     size: 25,
-          //   ),
-          // ),
-          title: Text(
-            'Chats',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
-          ),
-          actions: [
-            IconButton.filledTonal(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.edit,
-                )),
-            SizedBox(
-              width: 10,
-            ),
-          ],
-        ),
         body: Padding(
           padding: const EdgeInsets.all(10),
           child: SingleChildScrollView(

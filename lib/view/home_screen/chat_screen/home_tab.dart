@@ -25,7 +25,10 @@ class _HomeTabState extends State<HomeTab> {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => ChatInside(),
+              builder: (context) => ChatInside(
+                username: widget.username,
+                profile: widget.profile,
+              ),
             ));
       },
       child: ListTile(

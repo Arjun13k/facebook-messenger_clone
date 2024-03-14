@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:messenger_clone/core/constant/color_const.dart';
 import 'package:messenger_clone/view/home_screen/status_screen/widget/my_status.dart';
+import 'package:messenger_clone/view/home_screen/status_screen/widget/story_images.dart';
 
 class StatusGrid extends StatelessWidget {
   const StatusGrid(
@@ -67,41 +68,51 @@ class StatusGrid extends StatelessWidget {
                         ),
                       ),
                     )
-                  : Container(
-                      child: Stack(
-                        children: [
-                          Container(
-                            height: 250,
-                            width: 180,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: NetworkImage(storyPic),
-                                  fit: BoxFit.cover),
-                              borderRadius: BorderRadius.circular(20),
+                  : InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => StoryImage(),
+                            ));
+                      },
+                      child: Container(
+                        child: Stack(
+                          children: [
+                            Container(
+                              height: 250,
+                              width: 180,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: NetworkImage(storyPic),
+                                    fit: BoxFit.cover),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                             ),
-                          ),
-                          Positioned(
-                              top: 10,
-                              left: 10,
-                              child: CircleAvatar(
-                                  backgroundColor: Colors.blue,
-                                  radius: 30,
-                                  child: CircleAvatar(
-                                    radius: 26,
-                                    backgroundColor: Colors.white,
+                            Positioned(
+                                top: 10,
+                                left: 10,
+                                child: CircleAvatar(
+                                    backgroundColor: Colors.blue,
+                                    radius: 30,
                                     child: CircleAvatar(
-                                      backgroundImage: NetworkImage(circlePic),
-                                    ),
-                                  ))),
-                          Positioned(
-                              bottom: 10,
-                              left: 15,
-                              child: Text(
-                                text,
-                                style: TextStyle(
-                                    color: ColorConstant.primaryWhite),
-                              ))
-                        ],
+                                      radius: 26,
+                                      backgroundColor: Colors.white,
+                                      child: CircleAvatar(
+                                        backgroundImage:
+                                            NetworkImage(circlePic),
+                                      ),
+                                    ))),
+                            Positioned(
+                                bottom: 10,
+                                left: 15,
+                                child: Text(
+                                  text,
+                                  style: TextStyle(
+                                      color: ColorConstant.primaryWhite),
+                                ))
+                          ],
+                        ),
                       ),
                     ),
             ],
