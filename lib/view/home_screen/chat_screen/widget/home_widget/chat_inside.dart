@@ -87,6 +87,7 @@ class ChatInside extends StatelessWidget {
           children: [
             ListView.separated(
                 shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) => ChatAlign(
                     text: DummyDb.chat[index]["text"],
                     isSender: DummyDb.chat[index]["isSender"]),
